@@ -1,112 +1,80 @@
 [handleMsg]:  {
   key: {
-    remoteJid: '573117259636@s.whatsapp.net',
+    remoteJid: '573212685657@s.whatsapp.net',
     fromMe: false,
-    id: 'E3B0DD0D837C354B4B',
+    id: '8544DDCEDCFADAFE4A',
     participant: undefined
   },
-  messageTimestamp: 1690827710,
-  pushName: 'Norbey Moreno S.',
+  messageTimestamp: 1690906038,
+  pushName: 'Daniel',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage { text: 'comoasi', contextInfo: [ContextInfo] },
+    extendedTextMessage: ExtendedTextMessage { text: 'hola', contextInfo: [ContextInfo] },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'comoasi',
-  from: '573117259636'
+  body: 'hola',
+  from: '573212685657'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573117259636@s.whatsapp.net',
+    remoteJid: '573212685657@s.whatsapp.net',
     fromMe: false,
-    id: '4CB95DAA5803041F57',
+    id: '17ACC11CE7818400C5',
     participant: undefined
   },
-  messageTimestamp: 1690827713,
-  pushName: 'Norbey Moreno S.',
+  messageTimestamp: 1690906039,
+  pushName: 'Daniel',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'donde desplegarlo',
-      contextInfo: [ContextInfo]
-    },
+    extendedTextMessage: ExtendedTextMessage { text: '2', contextInfo: [ContextInfo] },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'donde desplegarlo',
-  from: '573117259636'
+  body: '2',
+  from: '573212685657'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573117259636@s.whatsapp.net',
+    remoteJid: '573212685657@s.whatsapp.net',
     fromMe: false,
-    id: 'BCFE7FB04DCD9264DE',
+    id: '7715320231FDD67F8A',
     participant: undefined
   },
-  messageTimestamp: 1690827719,
-  pushName: 'Norbey Moreno S.',
+  messageTimestamp: 1690906040,
+  pushName: 'Daniel',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'mándeme un audio',
-      contextInfo: [ContextInfo]
-    },
+    extendedTextMessage: ExtendedTextMessage { text: '1', contextInfo: [ContextInfo] },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'mándeme un audio',
-  from: '573117259636'
+  body: '1',
+  from: '573212685657'
 }
 [handleMsg]:  {
   key: {
-    remoteJid: '573117259636@s.whatsapp.net',
+    remoteJid: '573212685657@s.whatsapp.net',
     fromMe: false,
-    id: '0F82B71DB74F716D60',
+    id: 'CDF0AFD2CE611BE538',
     participant: undefined
   },
-  messageTimestamp: 1690827722,
-  pushName: 'Norbey Moreno S.',
+  messageTimestamp: 1690906044,
+  pushName: 'Daniel',
   broadcast: false,
   message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'o lo llamo',
-      contextInfo: [ContextInfo]
-    },
+    extendedTextMessage: ExtendedTextMessage { text: '2', contextInfo: [ContextInfo] },
     messageContextInfo: MessageContextInfo {
       deviceListMetadata: [DeviceListMetadata],
       deviceListMetadataVersion: 2
     }
   },
-  body: 'o lo llamo',
-  from: '573117259636'
-}
-[handleMsg]:  {
-  key: {
-    remoteJid: '573117259636@s.whatsapp.net',
-    fromMe: false,
-    id: 'A5C8042A4B28AE5CF9',
-    participant: undefined
-  },
-  messageTimestamp: 1690827727,
-  pushName: 'Norbey Moreno S.',
-  broadcast: false,
-  message: Message {
-    extendedTextMessage: ExtendedTextMessage {
-      text: 'bot.itefs.com',
-      contextInfo: [ContextInfo]
-    },
-    messageContextInfo: MessageContextInfo {
-      deviceListMetadata: [DeviceListMetadata],
-      deviceListMetadataVersion: 2
-    }
-  },
-  body: 'bot.itefs.com',
-  from: '573117259636'
+  body: '2',
+  from: '573212685657'
 }

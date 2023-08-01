@@ -7,15 +7,15 @@ const MockAdapter = require('@bot-whatsapp/database/mock')
 
 
 
-const flowSecundario = addKeyword(['0', 'siguiente']).addAnswer(['📄 Escribe *hola* para volver al menu '])
-
-
-
+const flowSecundario = addKeyword(['0', 'menu'])
 const flowDocs = addKeyword(['1']).addAnswer(
     [
         '🖥️ Estaremos atendiendo tu solictud',
-        'Dejanos tu nombre-cargo-requerimiento',
-        '\n*0* Para siguiente paso .',
+        'Dejanos tu información',
+        '1.Nombre',
+        '2.Cargo',
+        '3.Requerimiento',
+        '\n*0* Para ir al menu.',
     ],
     null,
     null,
@@ -24,15 +24,11 @@ const flowDocs = addKeyword(['1']).addAnswer(
 
 
 
-
-
-
-
 const flowTuto = addKeyword(['tutorial', 'tuto']).addAnswer(
     [
         '🙌 Aquí encontras un ejemplo rapido',
         'https://bot-whatsapp.netlify.app/docs/example/',
-        '\n*0* Para siguiente paso.',
+        '\n*0* Para ir al menu.',
     ],
     null,
     null,
@@ -45,7 +41,7 @@ const flowGracias = addKeyword(['2', 'grac']).addAnswer(
     [
         '🚀 Bienvenido a administracion',
         `[Contactar por WhatsApp](https://wa.me/${telefonoContacto})`,
-        '\n*0* Para siguiente paso.',
+        '\n*0* Para ir al menu.',
     ],
     null,
     null,
@@ -54,8 +50,8 @@ const flowGracias = addKeyword(['2', 'grac']).addAnswer(
 
 
 const flowDiscord = addKeyword(['3']).addAnswer(
-    ['Conoces nuestros servicios', 'https://itefs.com/','Conoces nuestro portafolio',
-    'https://drive.google.com/file/d/1llTfuxUP88qqg28qxGWpoO-lAdCevrLl/view?usp=sharing','\n*0* Para siguiente paso.'],
+    ['Conoces nuestros servicios', 'https://itefs.com/','Conoce nuestro portafolio',
+    'https://drive.google.com/file/d/1llTfuxUP88qqg28qxGWpoO-lAdCevrLl/view?usp=sharing','\n*0* Para ir al menu.'],
     null,
     null,
     [flowSecundario]
@@ -63,12 +59,12 @@ const flowDiscord = addKeyword(['3']).addAnswer(
 
 
 
-const flowPrincipal = addKeyword(['hola', 'Buenos dias', 'Buen dia','menu ',])
+const flowPrincipal = addKeyword(['0','hola', 'Buenos dias', 'Buen dia','menu','Hola','ola','Buenas tardes','buenas tardes','buenos dias','buenas noches','Buenas noches','como estas'])
     .addAnswer('🚀 Hola Bienvenidos a nuestro canal de Soporte Itefs Sas')
     .addAnswer('*Te recordamos que ItefsBot se encuentra en Fase de desarrollo*')
     .addAnswer(
         [
-            'En que podemos brindarte ayuda',
+            'Soy itefsbot en que podemos ayudarte!',
             '📋 *1* Soporte Tecnico',
             '👨‍💻 *2* Comunicarce con adminstracion',
             '📂 *3* Nuestros servicios',
@@ -78,17 +74,16 @@ const flowPrincipal = addKeyword(['hola', 'Buenos dias', 'Buen dia','menu ',])
         null,
         [flowDocs, flowGracias, flowTuto, flowDiscord]
     )
-
-
-
-
-
+    
 
 const main = async () => {
     const adapterDB = new MockAdapter()
     const adapterFlow = createFlow([flowPrincipal])
-    const adapterProvider = createProvider(BaileysProvider)
-
+    const adapterProvider = createProvider(BaileysProvider,{
+        inactivityTimeout: 60000
+    })
+    
+    
     createBot({
         flow: adapterFlow,
         provider: adapterProvider,
